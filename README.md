@@ -2,12 +2,13 @@ Drupal Thinglink module
 =======================
 
 Copyright 2010 by Peter Rukavina.
-Licensed under http://www.fsf.org/licensing/licenses/gpl.txt GNU Public License
+
+Licensed under [GNU Public License](http://www.fsf.org/licensing/licenses/gpl.txt).
 
 What is this?
 -------------
 
-Thinglink.com is a web service that allows regions in images to be "tagged" in
+[Thinglink.com](http://Thinglink.com) is a web service that allows regions in images to be "tagged" in
 a manner similar to that you may be used to from Flickr's "Add Notes" feature.
 
 The Thinglink API supports to embedding of an "in-place tagging tool on third-
