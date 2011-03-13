@@ -1,7 +1,7 @@
 Drupal Thinglink module
 =======================
 
-Copyright 2010 by Peter Rukavina.
+Copyright 2010 by [Peter Rukavina](http://ruk.ca).
 
 Licensed under [GNU Public License](http://www.fsf.org/licensing/licenses/gpl.txt).
 
@@ -24,8 +24,8 @@ How to Install
 --------------
 
 * Install this module for your Drupal site.
-* Sign up for a Thinglink account at http://www.thinglink.com/
-* Visit http://www.thinglink.com/action/massembed to get your "Thinglink ID".
+* Sign up for a Thinglink account at [http://www.thinglink.com/](http://www.thinglink.com/)
+* Visit [http://www.thinglink.com/action/massembed](http://www.thinglink.com/action/massembed) to get your "Thinglink ID".
 * On admin/settings/thinglink on your site, enter your "Thinglink ID".
 
 You should now find all images on your site automatically have the Thinglink
