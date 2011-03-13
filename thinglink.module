@@ -29,7 +29,7 @@ function thinglink_admin_settings_form(&$form_state) {
     '#type' => 'checkbox',
     '#title' => t('Add thinglink tagging tool to all pages.'),
     '#default_value' => variable_get('thinglink_enabled', 0),
-    '#description' => t('Enables the Thinglink "personal tagging tool" on all pages.')
+    '#description' => t("Enables the Thinglink <a href=\"@url\">personal tagging tool</a> on all pages. If enabled that the tool will be added to all images above the (undocumented) Thinglink minimum size. To prevent a given image from being eligible for tagging, give it the CSS class 'neverThinglink'.",array('@url' => 'http://www.thinglink.com/action/massembed'))
   );
  
   $form['thinglink_id'] = array(
