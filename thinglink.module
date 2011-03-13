@@ -1,0 +1,69 @@
+<?php
+// $Id$
+
+/*
+ * @file
+ * Drupal Module: Thinglink
+ * Adds the required Javascript to the bottom of all your Drupal pages
+ * to allow use of the Thinglink.com "personal tagging tool".
+ *
+ * @author: Peter Rukavina <ruk.ca>
+ */
+
+function thinglink_menu() {
+  $items['admin/settings/thinglink'] = array(
+    'title' => 'Thinglink',
+    'description' => 'Configure the settings used to generate your Thinglink personal tagging tool.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('thinglink_admin_settings_form'),
+    'access arguments' => array('access administration pages'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+function thinglink_admin_settings_form(&$form_state) {
+
+  $form['thinglink_enabled'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add thinglink tagging tool to all pages.'),
+    '#default_value' => variable_get('thinglink_enabled', 0),
+    '#description' => t('Enables the Thinglink "personal tagging tool" on all pages.')
+  );
+ 
+  $form['thinglink_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Thinglink ID'),
+    '#default_value' => variable_get('thinglink_id', ''),
+    '#size' => 20,
+    '#maxlength' => 100,
+    '#required' => TRUE,
+    '#description' => t('Your Thinglink ID. Get it from <a href="@url">Thinglink website</a>.', array('@url' => 'http://www.thinglink.com/action/massembed')),
+  );
+
+  $form['thinglink_endpoint'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Thinglink Endpoint'),
+    '#default_value' => variable_get('thinglink_endpoint', 'http://www.thinglink.com/jse/embed.js'),
+    '#size' => 45,
+    '#maxlength' => 100,
+    '#required' => TRUE,
+    '#description' => t('The URL for the Thinglink Javascript code. Likely no reason to change this, but see <a href="@url">Thinglink website</a> if needed.', array('@url' => 'http://www.thinglink.com/action/massembed')),
+  );
+  
+  return system_settings_form($form);
+}
+
+function thinglink_init() {
+  
+  $enabled = variable_get('thinglink_enabled', 0);
+  $id = variable_get('thinglink_id', '');
+  $endpoint = variable_get('thinglink_endpoint', '');
+  
+  if (($enabled) and ($id) and ($endpoint)) {
+    drupal_add_js('__tlid = ' . drupal_to_js($id) . ';', 'inline', 'footer');
+    $script .= 'document.write(unescape("%3Cscript src=\'' . $endpoint . '\' type=\'text/javascript\'%3E%3C/script%3E"));';
+    drupal_add_js($script, 'inline', 'footer');
+  }
+}

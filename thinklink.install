@@ -1,0 +1,20 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Installation file for Thinglink module.
+ */
+
+function thinglink_install() {
+  variable_set('thinglink_enabled', 0);
+  variable_set('thinglink_endpoint', 'http://www.thinglink.com/jse/embed.js');
+  variable_set('thinglink_id', '');
+}
+
+function thinglink_uninstall() {
+  variable_del('thinglink_enabled');
+  variable_del('thinglink_endpoint');
+  variable_del('thinglink_id');
+}
+

@@ -1,0 +1,3 @@
+name = Thinglink
+description = Add Thinglink "personal tagging tool" Javascript to all pages. Requires a (free) account from Thinglink.com.
+core = 6.x
