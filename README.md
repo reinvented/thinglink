@@ -11,12 +11,12 @@ What is this?
 [Thinglink.com](http://Thinglink.com) is a web service that allows regions in images to be "tagged" in
 a manner similar to that you may be used to from Flickr's "Add Notes" feature.
 
-The Thinglink API supports to embedding of an "in-place tagging tool on third-
+The Thinglink API supports embedding of an "in-place tagging tool on third-
 party websites that allows images to be tagged without the need to visit the
-Thinglink.com site.
+Thinglink.com site."
 
 This Drupal module enables this process for a Drupal site: once installed and
-configured, the module automatically adds the necessary Thinglink Javascript
+configured, the module automatically adds the necessary Thinglink JavaScript
 to every image on your Drupal site, allowing you to add tags, share the image,
 and obtain an image embed code directly on your site.
 
@@ -30,4 +30,4 @@ How to Install
 
 You should now find all images on your site automatically have the Thinglink
 tagging tool enabled: just hover over an image and you should see the 
-Thinglink toolbar in the top-left.
+Thinglink toolbar in the top-left corner.

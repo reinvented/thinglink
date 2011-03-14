@@ -49,7 +49,7 @@ function thinglink_admin_settings_form(&$form_state) {
     '#size' => 45,
     '#maxlength' => 100,
     '#required' => TRUE,
-    '#description' => t('The URL for the Thinglink Javascript code. Likely no reason to change this, but see <a href="@url">Thinglink website</a> if needed.', array('@url' => 'http://www.thinglink.com/action/massembed')),
+    '#description' => t('The URL for the Thinglink JavaScript code. Likely no reason to change this, but see <a href="@url">Thinglink website</a> if needed.', array('@url' => 'http://www.thinglink.com/action/massembed')),
   );
   
   return system_settings_form($form);
